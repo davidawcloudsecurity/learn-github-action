@@ -4,21 +4,15 @@ terraform {
      source = "hashicorp/aws"
    }
  }
- 
- backend "s3" {
-   region = "us-east-1"
-   key    = "terraform.tfstate"
- }
-}
- 
+
 provider "aws" {
  region = "us-east-1"
 }
  
 resource "aws_instance" "test_instance" {
- ami           = "ami-830c94e3"
- instance_type = "t2.nano"
+ ami           = "ami-07761f3ae34c4478d"
+ instance_type = "t2.micro"
  tags = {
-   Name = "test_instance"
+   Name = "test_instance_github_action"
  }
 }
