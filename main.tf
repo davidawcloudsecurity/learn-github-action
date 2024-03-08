@@ -54,7 +54,7 @@ resource "aws_subnet" "public_subnets" {
  availability_zone = element(var.azs, count.index)
   
  tags = {
-   Name = ${local.name_tag}"_Public Subnet ${count.index + 1}"
+   Name = "${local.name_tag}_Public Subnet ${count.index + 1}"
  }
 }
  
@@ -65,6 +65,6 @@ resource "aws_subnet" "private_subnets" {
  availability_zone = element(var.azs, count.index)
  
  tags = {
-   Name = ${local.name_tag}"_Private Subnet ${count.index + 1}"
+   Name = "${local.name_tag}_Private Subnet ${count.index + 1}"
  }
 }
