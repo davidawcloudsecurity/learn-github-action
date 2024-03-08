@@ -18,3 +18,7 @@ jobs:
 
     - name: Run Docker container
       run: docker run -d -p 80:80 --name my-nginx nginx
+
+    - name: Run Curl command
+      run: curl -v localhost:80
+      
