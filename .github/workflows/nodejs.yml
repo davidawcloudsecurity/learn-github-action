@@ -17,4 +17,4 @@ jobs:
       uses: docker/setup-buildx-action@v1
 
     - name: Run Docker container
-      run: docker run -d -p 80:80 --name my-nginx my-nginx
+      run: docker run -d -p 80:80 --name my-nginx nginx
